@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+</head>
+<body>
+  
+  <h1>Calculadora</h1>
+  Primeiro termo<br />
+  <input id = "n1" type = "number"/><br />
+  
+  Segundo termo<br />
+  <input id = "n2" type = "number"/><br />
+  
+  <button onclick = "soma()">Adição</button>
+  <button onclick = "sub()">Subtração</button>
+  <button onclick = "multi()">Multiplicação</button>
+  <button onclick = "div()">Divisão</button>
+  <button onclick = "exponencial()">Potência</button>
+  <button onclick = "hip()">Hipotenusa</button>
+  
+  <br />
+  Solução é <span></span>
+  <br />
+  <script>
+    var n1 = document.querySelector('#n1')
+    var n2 = document.querySelector('#n2')
+    var resultado = document.querySelector('span')
+    
+    function soma(){
+      resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+    }
+    function sub(){
+      resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+    }
+    function multi(){
+      resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+    }
+    function div(){
+      resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+    }
+    function exponencial(){
+      resultado.innerHTML = parseInt(n1.value) ** parseInt(n2.value)
+    }
+     function hip(){
+      resultado.innerHTML = Math.sqrt((parseInt(n1.value) * parseInt(n1.value)) + (parseInt(n2.value) * parseInt(n2.value)))
+    }
+  </script>  
+  
+</body>
+</html>
